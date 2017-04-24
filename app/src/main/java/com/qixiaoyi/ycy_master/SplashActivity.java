@@ -1,23 +1,14 @@
 package com.qixiaoyi.ycy_master;
 
 import android.os.Environment;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.qixiaoyi.commonlibrary.ioc.ViewById;
 import com.qixiaoyi.fascialibrary.base.FasiciaBaseActivity;
 
 import java.io.File;
 import java.io.IOException;
 
 public class SplashActivity extends FasiciaBaseActivity {
-
-    @ViewById(R.id.sample_text)
-    TextView tv;
-    @ViewById(R.id.textView)
-    TextView tv2;
     // 加载NDK
     static {
         System.loadLibrary("native-lib");
@@ -34,15 +25,7 @@ public class SplashActivity extends FasiciaBaseActivity {
 
     @Override
     protected void initView() {
-        tv.setText(stringFromJNI());
-        tv2.setText(stringFromJNI2());
-        Button button = (Button) findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int i = 2/1;
-            }
-        });
+
     }
     @Override
     protected void initData() {
